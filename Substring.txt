@@ -1,0 +1,21 @@
+﻿import java.util.Scanner;
+class Trail2
+{
+public static void main(String args[])
+{
+        String s,a,ou=null;
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter a string");
+        s = in.nextLine();
+        int l = s.length();
+        if (s.substring(0, l/2).equals(s.substring(l/2, l))) {
+                ou= s.substring(0, l/2);
+        }
+        for (int i = 1; i < l; i++) {
+                if (s.substring(0, i).equals(s.substring(l-i, l) )) {
+                        ou= s.substring(0, i);
+                }
+        }
+        System.out.println("The Repeating String is "+ou);
+        }
+}
